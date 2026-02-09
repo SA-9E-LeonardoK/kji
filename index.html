@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Q3 Drill 1 ౨ৎ</title>
+
+  <style>
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('HelvNuPro.otf') format('opentype');
+    }
+
+    body {
+      background-color: #ffffff;
+    }
+
+    p,
+    h1 {
+      font-family: 'Helvetica';
+      letter-spacing: -1px;
+    }
+
+    .calculator-bg {
+      width: 85%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 40px;
+      background-color: #fff8e5;
+      border-radius: 25px;
+      text-align: center;
+    }
+
+    button {
+      background-color: #aacbe8;
+      border: 2px solid #333;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 20px;
+      font-family: 'Helvetica';
+    }
+
+    button:hover {
+      background-color: #8fb5dd;
+    }
+
+    #display kbd {
+      background-color: #8fb5dd;
+      font-size: 50px;
+      padding: 15px 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="calculator-bg">
+
+    <h1>Basic Calculator</h1>
+    <p id="para1">Insert and add two numbers here:</p>
+
+    <div class="col-md-6 mb-3 mx-auto">
+      <label class="form-label">First Addend</label>
+      <input type="text" class="form-control" id="addend1" placeholder="Any number here">
+    </div>
+
+    <div class="col-md-6 mb-3 mx-auto">
+      <label class="form-label">Second Addend</label>
+      <input type="text" class="form-control" id="addend2" placeholder="Any number here">
+    </div>
+
+    <script>
+      function addNumbers() {
+        let a = Number(document.getElementById("addend1").value);
+        let b = Number(document.getElementById("addend2").value);
+
+        let sum = a + b;
+
+        document.getElementById("display").innerHTML = "<kbd>" + sum + "</kbd>";
+      }
+    </script>
+
+    <button type="button" onclick="addNumbers()">
+      Display
+    </button>
+
+    <br><br><br>
+
+    <p id="display"></p>
+
+  </div>
+
+</body>
+</html>
+
